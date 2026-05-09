@@ -1,0 +1,47 @@
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// Collection: posts
+// Document ID: auto-generated
+// Fields:
+//   - title: string (required, 1-200 chars)
+//   - content: string (required, 1-10000 chars)
+//   - createdAt: timestamp (required)
+//   - author: string (optional)
+//
+// ===============================================================
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.email == "shahviraj918@gmail.com");
+    }
+
+    function isValidPost(data) {
+      return data.keys().hasAll(['title', 'content', 'createdAt']) &&
+             data.title is string && data.title.size() > 0 && data.title.size() <= 200 &&
+             data.content is string && data.content.size() > 0 && data.content.size() <= 10000 &&
+             data.createdAt is timestamp;
+    }
+
+    match /posts/{postId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidPost(request.resource.data);
+      allow update: if isAdmin() && isValidPost(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}

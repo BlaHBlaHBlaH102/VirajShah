@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Blog Post",
+      "description": "A blog post on the portfolio website.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "The title of the post." },
+        "content": { "type": "string", "description": "The markdown content of the post." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "The timestamp when the post was created." },
+        "author": { "type": "string", "description": "The author of the post." }
+      },
+      "required": ["title", "content", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/posts/{postId}": {
+      "schema": "Post",
+      "description": "Collection of blog posts."
+    }
+  }
+}

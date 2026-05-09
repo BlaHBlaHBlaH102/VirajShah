@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueUltraLight.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueUltraLightItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueThin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueThinItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueLightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueRoman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueMediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueBoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueHeavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueHeavyItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueBlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@theme {
+  --font-sans: "Helvetica Neue", "Inter", "Helvetica", "Arial", sans-serif;
+  --font-display: "Helvetica Neue", "Space Grotesk", "Helvetica", sans-serif;
+  --font-serif: "Sorts Mill Goudy", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --bg: #020617;
+    --text: #f1f5f9;
+    --card-bg: rgba(15, 23, 42, 0.4);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --accent: #3b82f6;
+    --accent-soft: rgba(59, 130, 246, 0.1);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    @apply transition-colors duration-500 selection:bg-blue-500/30 selection:text-blue-200 antialiased overflow-x-hidden;
+  }
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-blue-400 to-indigo-600;
+}
+
+.section-title {
+  @apply font-display text-[clamp(3rem,10vw,4rem)] md:text-[clamp(4rem,12vw,6rem)] lg:text-[clamp(6rem,15vw,7.5rem)] font-normal tracking-[-0.02em] mb-10 md:mb-16 leading-[0.9] md:leading-[0.85] uppercase text-left opacity-90;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-4 px-8 py-4 rounded-full bg-blue-600 text-white font-medium uppercase tracking-[0.2em] text-xs hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300;
+}
+
+.card-hover {
+  @apply transition-all duration-700 hover:scale-[1.01] hover:shadow-[0_0_80px_-12px_rgba(59,130,246,0.2)] hover:border-blue-500/20;
+}
+
+.text-thin-huge {
+  @apply text-[clamp(3rem,10vw,6rem)] md:text-[clamp(5rem,12vw,9rem)] lg:text-[clamp(8rem,15vw,11.25rem)] font-thin tracking-[-0.04em] leading-[0.9] md:leading-[0.8] uppercase;
+}
+
+.text-name {
+  @apply text-[clamp(3rem,10vw,6rem)] md:text-[clamp(5rem,12vw,8rem)] lg:text-[clamp(7rem,15vw,10rem)] font-light tracking-[-0.03em] leading-[0.9] md:leading-[0.8] uppercase;
+}
+
+.card-title {
+  @apply text-[clamp(1.25rem,5vw,2rem)] md:text-[clamp(2rem,7vw,3rem)] lg:text-[clamp(2.5rem,9vw,4rem)] font-thin tracking-[-0.02em] text-slate-100 uppercase leading-tight py-2;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
