@@ -134,7 +134,7 @@ export default function App() {
           <div className="flex gap-1">
             <button 
               onClick={() => setActiveTab("resume")}
-              className={`px-6 md:px-10 py-3 rounded-full text-sm font-light uppercase tracking-[0.3em] transition-all duration-500 relative overflow-hidden group ${activeTab === "resume" ? "text-white" : "text-slate-500 hover:text-slate-300"}`}
+              className={`px-4 md:px-10 py-3 rounded-full text-xs md:text-sm font-light uppercase tracking-[0.2em] md:tracking-[0.4em] transition-all duration-500 relative overflow-hidden group ${activeTab === "resume" ? "text-white" : "text-slate-500 hover:text-slate-300"}`}
             >
               {activeTab === "resume" && (
                 <motion.div 
@@ -146,7 +146,7 @@ export default function App() {
             </button>
             <button 
               onClick={() => setActiveTab("hobbies")}
-              className={`px-6 md:px-10 py-3 rounded-full text-sm font-light uppercase tracking-[0.3em] transition-all duration-500 relative overflow-hidden group ${activeTab === "hobbies" ? "text-white" : "text-slate-500 hover:text-slate-300"}`}
+              className={`px-4 md:px-10 py-3 rounded-full text-xs md:text-sm font-light uppercase tracking-[0.2em] md:tracking-[0.4em] transition-all duration-500 relative overflow-hidden group ${activeTab === "hobbies" ? "text-white" : "text-slate-500 hover:text-slate-300"}`}
             >
               {activeTab === "hobbies" && (
                 <motion.div 
@@ -158,7 +158,7 @@ export default function App() {
             </button>
             <button 
               onClick={() => setActiveTab("blog")}
-              className={`px-6 md:px-10 py-3 rounded-full text-sm font-light uppercase tracking-[0.3em] transition-all duration-500 relative overflow-hidden group ${activeTab === "blog" ? "text-white" : "text-slate-500 hover:text-slate-300"}`}
+              className={`px-4 md:px-10 py-3 rounded-full text-xs md:text-sm font-light uppercase tracking-[0.2em] md:tracking-[0.4em] transition-all duration-500 relative overflow-hidden group ${activeTab === "blog" ? "text-white" : "text-slate-500 hover:text-slate-300"}`}
             >
               {activeTab === "blog" && (
                 <motion.div 
@@ -182,7 +182,7 @@ export default function App() {
             transition={{ duration: 0.8, ease: "circOut" }}
           >
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20">
+            <section className="relative min-h-screen flex flex-col items-center justify-start lg:justify-center overflow-hidden px-6 pt-56 md:pt-72 pb-24">
               <motion.div 
                 style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
                 className="relative z-10 text-center w-full max-w-7xl"
@@ -191,7 +191,7 @@ export default function App() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-block px-6 py-2 mb-12 rounded-full glass-dark text-blue-400 text-[11px] font-mono uppercase tracking-[0.6em] border-blue-500/30"
+                  className="inline-block px-6 py-2 mb-12 rounded-full glass-dark text-blue-400 text-[10px] md:text-[11px] font-mono uppercase tracking-[0.4em] md:tracking-[0.6em] border-blue-500/30 max-w-full"
                 >
                   Green Level High School • Class of 2028 • 6 AP Courses
                 </motion.div>
@@ -250,7 +250,7 @@ export default function App() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-3xl md:text-5xl text-slate-400 max-w-6xl mx-auto font-thin leading-[1.1] tracking-[-0.02em] mb-16"
+                  className="text-3xl md:text-5xl text-slate-400 max-w-6xl mx-auto font-thin leading-[1.1] tracking-normal mb-16"
                 >
                   Pioneering <span className="text-slate-100 font-thin italic font-serif">Electrical Engineering</span> & <span className="text-slate-100 font-thin italic font-serif">Robotics</span> through community-driven innovation.
                 </motion.p>
@@ -303,10 +303,10 @@ export default function App() {
                   className="lg:col-span-8 glass p-8 md:p-16 lg:p-20 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] border-blue-500/10 relative overflow-hidden group"
                 >
                   <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] group-hover:bg-blue-500/10 transition-colors duration-1000" />
-                  <h3 className="text-4xl md:text-7xl font-thin mb-10 flex items-center gap-6 tracking-[-0.02em] uppercase">
+                  <h3 className="text-4xl md:text-7xl font-thin mb-10 flex items-center gap-6 tracking-wider uppercase">
                     <Zap className="text-blue-400" size={48} /> The Vision
                   </h3>
-                  <p className="text-slate-400 leading-[1.1] text-3xl md:text-5xl font-thin tracking-[-0.02em]">
+                  <p className="text-slate-400 leading-[1.1] text-3xl md:text-5xl font-thin tracking-wider">
                     Motivated and curious high school student passionate about <span className="text-slate-100 font-thin italic font-serif">engineering, robotics, and community engagement</span>. Looking for collaborative opportunities to solve real-world engineering problems through <span className="text-blue-400 font-thin">Electrical Engineering, Innovation, and Patent Law</span>.
                   </p>
                 </motion.div>
@@ -318,7 +318,7 @@ export default function App() {
                   transition={{ delay: 0.2 }}
                   className="lg:col-span-4 glass p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] lg:rounded-[4rem] border-blue-500/10 bg-blue-500/5 flex flex-col justify-center"
                 >
-                  <h3 className="text-3xl md:text-5xl font-thin mb-8 flex items-center gap-4 tracking-[-0.02em] uppercase">
+                  <h3 className="text-3xl md:text-5xl font-thin mb-8 flex items-center gap-4 tracking-wider uppercase">
                     <Heart className="text-blue-400" size={32} /> Resilience
                   </h3>
                   <p className="text-slate-300 leading-tight italic text-2xl font-serif font-thin">
@@ -410,19 +410,19 @@ export default function App() {
                   <div className="absolute -top-12 -right-12 p-12 opacity-5 group-hover:opacity-10 transition-opacity duration-1000">
                     <Globe size={300} />
                   </div>
-                  <h3 className="text-5xl md:text-7xl font-thin mb-6 tracking-[-0.02em] text-slate-100 uppercase">Click With Confidence</h3>
-                  <p className="text-blue-400/80 font-mono text-xs mb-8 uppercase tracking-[0.6em] font-light">Founder & President • 501(a) Nonprofit</p>
-                  <p className="text-slate-400 mb-12 text-2xl leading-tight font-thin tracking-[-0.01em]">
+                  <h3 className="text-5xl md:text-7xl font-thin mb-6 tracking-wider text-slate-100 uppercase">Click With Confidence</h3>
+                  <p className="text-blue-400/80 font-mono text-xs mb-8 uppercase tracking-[0.4em] md:tracking-[0.6em] font-light">Founder & President • 501(a) Nonprofit</p>
+                  <p className="text-slate-400 mb-12 text-2xl leading-tight font-thin tracking-wider">
                     Addressing elder scam awareness through workshops and digital resources. Reached 2,000+ seniors across 50+ presentations.
                   </p>
                   <div className="flex flex-wrap gap-8 mb-12">
                     <div className="border border-slate-800 px-8 py-6 rounded-[2rem]">
-                      <div className="text-6xl font-thin text-white tracking-tighter">2,000+</div>
-                      <div className="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-light mt-2">Volunteer Hours</div>
+                      <div className="text-5xl md:text-6xl font-thin text-white tracking-wider">2,000+</div>
+                      <div className="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-light mt-2">Volunteer Hours</div>
                     </div>
                     <div className="border border-slate-800 px-8 py-6 rounded-[2rem]">
-                      <div className="text-6xl font-thin text-white tracking-tighter">50+</div>
-                      <div className="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-light mt-2">Presentations</div>
+                      <div className="text-5xl md:text-6xl font-thin text-white tracking-wider">50+</div>
+                      <div className="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-light mt-2">Presentations</div>
                     </div>
                   </div>
                   <a 
@@ -642,7 +642,7 @@ export default function App() {
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-thin-huge text-white tracking-[-0.04em] text-center mb-16 md:mb-32 leading-[0.8] uppercase"
+              className="text-thin-huge text-white tracking-wider text-center mb-16 md:mb-32 leading-[0.8] uppercase"
             >
               THOUGHTS & <br className="md:hidden" /> <span className="text-gradient">INSIGHTS</span>
             </motion.h1>
@@ -722,7 +722,7 @@ export default function App() {
                           <span className="flex items-center gap-2"><Calendar size={14} className="text-blue-500" /> {post.createdAt?.toDate().toLocaleDateString() || 'Just now'}</span>
                           <span className="flex items-center gap-2"><User size={14} className="text-blue-500" /> {post.author}</span>
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-thin text-white tracking-tight leading-none uppercase">{post.title}</h2>
+                        <h2 className="text-4xl md:text-6xl font-thin text-white tracking-wider leading-none uppercase">{post.title}</h2>
                       </div>
                       {isAdmin && (
                         <button 
@@ -759,7 +759,7 @@ export default function App() {
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-thin-huge text-white tracking-[-0.04em] text-center mb-16 md:mb-32 leading-[0.8] uppercase"
+              className="text-thin-huge text-white tracking-wider text-center mb-16 md:mb-32 leading-[0.8] uppercase"
             >
               PASSIONS & <br className="md:hidden" /> <span className="text-gradient">PURSUITS</span>
             </motion.h1>
@@ -781,7 +781,7 @@ export default function App() {
                     </div>
                     <h2 className="card-title">Photography</h2>
                   </div>
-                  <p className="text-[clamp(1.25rem,3.5vw,1.75rem)] md:text-[clamp(1.5rem,4.5vw,2.5rem)] leading-[1.1] mb-16 font-thin tracking-[-0.02em] text-slate-400">
+                  <p className="text-[clamp(1.25rem,3.5vw,1.75rem)] md:text-[clamp(1.5rem,4.5vw,2.5rem)] leading-[1.1] mb-16 font-thin tracking-normal text-slate-400">
                     "Since I was seven or eight, I would go out into my backyard and take photos of all my LEGO sets."
                   </p>
                   <div className="space-y-10">
@@ -818,7 +818,7 @@ export default function App() {
                     </div>
                     <h2 className="card-title">Piano</h2>
                   </div>
-                  <p className="text-[clamp(1.25rem,3vw,1.75rem)] md:text-[clamp(1.5rem,4vw,2rem)] leading-tight font-thin tracking-[-0.01em] text-slate-400">
+                  <p className="text-[clamp(1.25rem,3vw,1.75rem)] md:text-[clamp(1.5rem,4vw,2rem)] leading-tight font-thin tracking-normal text-slate-400">
                     Performance is a cornerstone of my creative expression, featured in Guild Notes Magazine.
                   </p>
                 </div>
@@ -833,7 +833,7 @@ export default function App() {
                     </div>
                     <h2 className="card-title">Woodworking</h2>
                   </div>
-                  <p className="text-[clamp(1.25rem,3vw,1.75rem)] md:text-[clamp(1.5rem,4vw,2rem)] leading-tight font-thin tracking-[-0.01em] text-slate-400">
+                  <p className="text-[clamp(1.25rem,3vw,1.75rem)] md:text-[clamp(1.5rem,4vw,2rem)] leading-tight font-thin tracking-normal text-slate-400">
                     "I can take boring planks of wood and turn them into something dynamic, expressive, and useful."
                   </p>
                 </div>
@@ -860,7 +860,7 @@ export default function App() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-50" />
                   <div className="relative z-10">
-                    <h4 className="text-white text-3xl font-thin tracking-tighter mb-4">{item.title}</h4>
+                    <h4 className="text-white text-3xl font-thin tracking-wider mb-4">{item.title}</h4>
                     <p className="text-slate-500 font-mono text-[10px] uppercase tracking-[0.4em] font-light">{item.loc}</p>
                   </div>
                 </motion.div>

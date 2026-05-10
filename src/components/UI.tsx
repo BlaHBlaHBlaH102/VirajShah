@@ -25,13 +25,13 @@ export const Card = ({ title, subtitle, description, icon: Icon, tags, date, del
           </div>
         )}
         {date && (
-          <span className="text-[11px] font-mono text-slate-500 uppercase tracking-[0.5em] border border-slate-800 px-4 py-1.5 rounded-full font-light">
+          <span className="text-[9px] md:text-[11px] font-mono text-slate-500 uppercase tracking-[0.3em] md:tracking-[0.6em] border border-slate-800 px-3 md:px-4 py-1 md:py-1.5 rounded-full font-light">
             {date}
           </span>
         )}
       </div>
       <h3 className="card-title mb-4">{title}</h3>
-      {subtitle && <p className="text-blue-400/80 font-light text-sm uppercase tracking-[0.4em] mb-6">{subtitle}</p>}
+      {subtitle && <p className="text-blue-400/80 font-light text-xs md:text-sm uppercase tracking-[0.3em] md:tracking-[0.5em] mb-6">{subtitle}</p>}
       {description && <p className="text-slate-400 text-lg leading-relaxed mb-10 flex-grow font-light">{description}</p>}
       
       {link && linkText && (
@@ -51,7 +51,7 @@ export const Card = ({ title, subtitle, description, icon: Icon, tags, date, del
       {tags && (
         <div className="flex flex-wrap gap-3 mt-auto">
           {tags.map((tag) => (
-            <span key={tag} className="px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-500 text-[10px] font-mono uppercase tracking-[0.2em] font-light">
+            <span key={tag} className="px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-500 text-[9px] md:text-[10px] font-mono uppercase tracking-[0.2em] md:tracking-[0.3em] font-light">
               {tag}
             </span>
           ))}
@@ -99,7 +99,7 @@ export const Section = ({ children, id, title, subtitle }: { children: ReactNode
           className="mb-16"
         >
           <h2 className="section-title">{title}</h2>
-          {subtitle && <p className="text-slate-400 max-w-4xl text-lg md:text-xl font-light leading-relaxed tracking-tight">{subtitle}</p>}
+          {subtitle && <p className="text-slate-400 max-w-4xl text-lg md:text-xl font-light leading-relaxed tracking-normal">{subtitle}</p>}
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-transparent mt-6 rounded-full" />
         </motion.div>
       )}

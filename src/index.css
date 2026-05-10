@@ -156,11 +156,11 @@
 }
 
 .section-title {
-  @apply font-display text-[clamp(3rem,10vw,4rem)] md:text-[clamp(4rem,12vw,6rem)] lg:text-[clamp(6rem,15vw,7.5rem)] font-normal tracking-[-0.02em] mb-10 md:mb-16 leading-[0.9] md:leading-[0.85] uppercase text-left opacity-90;
+  @apply font-display text-[clamp(1.5rem,6vw,3rem)] md:text-[clamp(2.5rem,7vw,4.5rem)] lg:text-[clamp(3.5rem,8vw,5.5rem)] font-normal tracking-wider mb-10 md:mb-16 leading-[0.9] md:leading-[0.85] uppercase text-left opacity-90;
 }
 
 .btn-primary {
-  @apply inline-flex items-center gap-4 px-8 py-4 rounded-full bg-blue-600 text-white font-medium uppercase tracking-[0.2em] text-xs hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300;
+  @apply inline-flex items-center gap-4 px-8 py-4 rounded-full bg-blue-600 text-white font-medium uppercase tracking-widest text-xs hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300;
 }
 
 .card-hover {
@@ -168,15 +168,15 @@
 }
 
 .text-thin-huge {
-  @apply text-[clamp(3rem,10vw,6rem)] md:text-[clamp(5rem,12vw,9rem)] lg:text-[clamp(8rem,15vw,11.25rem)] font-thin tracking-[-0.04em] leading-[0.9] md:leading-[0.8] uppercase;
+  @apply text-[clamp(1.75rem,6vw,3.5rem)] md:text-[clamp(3rem,7vw,5.5rem)] lg:text-[clamp(4.5rem,9vw,7.5rem)] font-thin tracking-wider leading-[0.9] md:leading-[0.8] uppercase;
 }
 
 .text-name {
-  @apply text-[clamp(3rem,10vw,6rem)] md:text-[clamp(5rem,12vw,8rem)] lg:text-[clamp(7rem,15vw,10rem)] font-light tracking-[-0.03em] leading-[0.9] md:leading-[0.8] uppercase;
+  @apply text-[clamp(1.75rem,7vw,3.5rem)] md:text-[clamp(3rem,9vw,5.5rem)] lg:text-[clamp(4.5rem,11vw,7rem)] font-light tracking-wider leading-[0.9] md:leading-[0.8] uppercase;
 }
 
 .card-title {
-  @apply text-[clamp(1.25rem,5vw,2rem)] md:text-[clamp(2rem,7vw,3rem)] lg:text-[clamp(2.5rem,9vw,4rem)] font-thin tracking-[-0.02em] text-slate-100 uppercase leading-tight py-2;
+  @apply text-[clamp(1rem,4vw,1.4rem)] md:text-[clamp(1.4rem,5vw,2rem)] lg:text-[clamp(1.7rem,6vw,2.8rem)] font-thin tracking-wide text-slate-100 uppercase leading-tight py-2;
 }
 
 .no-scrollbar::-webkit-scrollbar {
